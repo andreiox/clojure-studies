@@ -1,4 +1,4 @@
-(ns inventory.class3)
+(ns inventory.functions)
 
 (defn discounted-value
   [full-value]
