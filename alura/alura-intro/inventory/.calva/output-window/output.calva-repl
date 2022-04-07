@@ -1,0 +1,118 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉inventory.core꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+clj꞉inventory.core꞉> 
+fala
+nil
+clj꞉inventory.core꞉> 
+fala
+nil
+clj꞉inventory.core꞉> 
+fala
+nil
+clj꞉inventory.core꞉> 
+Hello, World!
+nil
+clj꞉inventory.core꞉> 
+fala
+nil
+nil
+clj꞉inventory.core꞉> 
+Hello, World!
+nil
+clj꞉inventory.core꞉> 
+Hello, World!
+nil
+clj꞉inventory.core꞉> 
+; Syntax error compiling at (src/inventory/class3.clj:10:1).
+; Unable to resolve symbol: discounted-value in this context
+clj꞉inventory.class3꞉> 
+#'inventory.class3/discounted-value
+clj꞉inventory.class3꞉> 
+50
+clj꞉inventory.class3꞉> 
+50
+clj꞉inventory.class3꞉> 
+150
+clj꞉inventory.class3꞉> 
+135.0
+clj꞉inventory.class3꞉> 
+135.0
+clj꞉inventory.class3꞉> 
+150
+clj꞉inventory.class3꞉> 
+135.0
+clj꞉inventory.class3꞉> 
+150
+clj꞉inventory.class3꞉> 
+135.0
+clj꞉inventory.class3꞉> 
+nil
+clj꞉inventory.class3꞉> 
+#'inventory.class3/discounted-value
+clj꞉inventory.class3꞉> 
+135.0
+clj꞉inventory.class3꞉> 
+50
+clj꞉inventory.class3꞉> 
+135.0
+clj꞉inventory.class3꞉> 
+; Syntax error compiling at (src/inventory/class3.clj:19:10).
+; Unable to resolve symbol: should-apply-discount? in this context
+clj꞉inventory.class3꞉> 
+#'inventory.class3/should-apply-discount?
+clj꞉inventory.class3꞉> 
+false
+nil
+clj꞉inventory.class3꞉> 
+true
+nil
+clj꞉inventory.class3꞉> 
+#'inventory.class3/discounted-value-refactor
+clj꞉inventory.class3꞉> 
+900.0
+clj꞉inventory.class3꞉> 
+100
+clj꞉inventory.class3꞉> 
+100
+clj꞉inventory.class3꞉> 
+135.0
+clj꞉inventory.class3꞉> 
+#'inventory.class3/is-greater-than-100?
+clj꞉inventory.class3꞉> 
+#'inventory.class3/discounted-value-refactor
+clj꞉inventory.class3꞉> 
+100
+clj꞉inventory.class3꞉> 
+900.0
+clj꞉inventory.class3꞉> 
+#'inventory.class3/is-greater-than-100?
+clj꞉inventory.class3꞉> 
+#'inventory.class3/discounted-value-refactor
+clj꞉inventory.class3꞉> 
+100
+clj꞉inventory.class3꞉> 
+900.0
+clj꞉inventory.class3꞉> 
+100
+clj꞉inventory.class3꞉> 
+900.0
+clj꞉inventory.class3꞉> 
+90.9
+clj꞉inventory.class3꞉> 
