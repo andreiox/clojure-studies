@@ -21,3 +21,18 @@
         (recur func (rest sequence))))))
 
 (my-map-tail-recur println arr)
+
+
+(def arr2 (range 10))
+
+(println (reduce #(+ %1 %2) arr2))
+
+(defn my-reduce
+  ([func sequence]
+   (my-reduce func 0 sequence))
+  ([func val sequence]
+   (if (empty? sequence)
+     val
+     (recur func (func val (first sequence)) (rest sequence)))))
+
+(my-reduce + arr2)
