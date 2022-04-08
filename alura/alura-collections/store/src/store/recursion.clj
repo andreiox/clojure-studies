@@ -36,3 +36,14 @@
      (recur func (func val (first sequence)) (rest sequence)))))
 
 (my-reduce + arr2)
+
+
+(defn my-loop
+  [sequence]
+  (loop [sum 0
+         rest sequence]
+    (if (not (empty? rest))
+      (recur (inc sum) (next rest))
+      sum)))
+
+(println (my-loop arr2))
