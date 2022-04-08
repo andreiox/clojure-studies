@@ -1,10 +1,4 @@
-(ns store.group-by
-  (:require [store.db]))
-
-
-(store.db/all-orders)
-
-(println (group-by :user (store.db/all-orders)))
+(ns store.logic)
 
 (defn total-item
   [item]
@@ -25,11 +19,12 @@
 
 (defn count-per-user
   [[key value]]
-  {:user key 
+  {:user key
    :count (count value)
    :total-price (reduce + (total-orders value))})
 
-(->> (store.db/all-orders)
-     (group-by :user)
-     (map count-per-user)
-     println)
+(defn summary-per-user
+  [orders]
+  (->> orders
+       (group-by :user)
+       (map count-per-user)))
