@@ -18,3 +18,16 @@
   (pprint hospital))
 
 (simulate-one-day)
+
+
+(defn simulate-one-day-paralel
+  []
+  (def hospital (hospital.model/new-hospital))
+  (.start (Thread. (fn [] (hospital.logic/arrive-at hospital :queue 111))))
+  (.start (Thread. (fn [] (hospital.logic/arrive-at hospital :queue 222))))
+  (.start (Thread. (fn [] (hospital.logic/arrive-at hospital :queue 333))))
+  (.start (Thread. (fn [] (Thread/sleep 4000)
+                     (pprint hospital))))
+  (pprint hospital))
+
+(simulate-one-day-paralel)
