@@ -1,8 +1,17 @@
 (ns hospital.logic)
 
+(defn full-queue?
+  [hospital queue]
+  (-> hospital
+      (get queue)
+      count
+      (>= 2)))
+
 (defn arrive-at
   [hospital queue person]
-  (update hospital queue conj person))
+  (if (full-queue? hospital queue)
+    (throw (ex-info "full queue, meu chapa" {:person person}))
+    (update hospital queue conj person)))
 
 (defn attend
   [hospital queue]
