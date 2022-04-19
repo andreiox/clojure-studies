@@ -45,3 +45,12 @@
     (print-patient-id-with-validation patient2)))
 
 (test-print-patient-id-with-validation)
+
+
+(def Patients
+  "Patients schema"
+  {(:key :- Long) {:id Long
+                   :name String
+                   (s/optional-key :birthdate) s/Str}})
+
+(s/validate Patients {15 {:id 15, :name "Andre" :birthdate "1996-02-05"}})
